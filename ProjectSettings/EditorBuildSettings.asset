@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DiceRoll.unity
+    guid: b1e5507423d0f1442bc97dd1908b5659
   m_configObjects: {}
