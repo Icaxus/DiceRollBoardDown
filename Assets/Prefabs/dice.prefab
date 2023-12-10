@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8809945847578394653}
   - component: {fileID: 4662498301149208453}
+  - component: {fileID: 8020866321656383197}
   m_Layer: 0
-  m_Name: 1
+  m_Name: 3
   m_TagString: Edge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,11 +49,26 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.1, z: 0.4}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &8020866321656383197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582603743588135648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
+  _force: 10
+  edges: []
 --- !u!1 &593563391816234537
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,8 +79,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8748827144909945821}
   - component: {fileID: 6585382909204009325}
+  - component: {fileID: 3308183175635417204}
   m_Layer: 0
-  m_Name: 5
+  m_Name: 1
   m_TagString: Edge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,11 +118,26 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.4, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0.5}
+--- !u!114 &3308183175635417204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593563391816234537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
+  _force: 10
+  edges: []
 --- !u!1 &3326906579844729879
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,8 +148,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2075227791870412909}
   - component: {fileID: 6357618115667359576}
+  - component: {fileID: 5086538639442999750}
   m_Layer: 0
-  m_Name: 2
+  m_Name: 4
   m_TagString: Edge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,11 +187,26 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.1, z: 0.4}
   m_Center: {x: 0, y: -0.5, z: 0}
+--- !u!114 &5086538639442999750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326906579844729879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
+  _force: 10
+  edges: []
 --- !u!1 &7388231220246023685
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,8 +217,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2531081667294843}
   - component: {fileID: 38148988843626256}
+  - component: {fileID: 8442338987522902274}
   m_Layer: 0
-  m_Name: 3
+  m_Name: 2
   m_TagString: Edge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,11 +256,26 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.4, z: 0.4}
   m_Center: {x: 0.5, y: 0, z: 0}
+--- !u!114 &8442338987522902274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7388231220246023685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
+  _force: 10
+  edges: []
 --- !u!1 &8336531215705544097
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,8 +286,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8309636197304801352}
   - component: {fileID: 330257360298913504}
+  - component: {fileID: 1607159921894755881}
   m_Layer: 0
-  m_Name: 4
+  m_Name: 5
   m_TagString: Edge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,11 +325,26 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.4, z: 0.4}
   m_Center: {x: -0.5, y: 0, z: 0}
+--- !u!114 &1607159921894755881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336531215705544097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
+  _force: 10
+  edges: []
 --- !u!1 &8351882626660797517
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851631451657317371}
   - component: {fileID: 7018932438713980606}
+  - component: {fileID: 7179567736287789514}
   m_Layer: 0
   m_Name: 6
   m_TagString: Edge
@@ -313,11 +394,26 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.4, z: 0.1}
   m_Center: {x: 0, y: 0, z: -0.5}
+--- !u!114 &7179567736287789514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351882626660797517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
+  _force: 10
+  edges: []
 --- !u!1001 &6629353289888810511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,7 +480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 45e753e01a29fc84aa52db66a9ac9d29, type: 3}
       propertyPath: m_Name
-      value: dice Variant
+      value: dice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -464,6 +560,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 0}
   _force: 25
+  edges:
+  - {fileID: 593563391816234537}
+  - {fileID: 7388231220246023685}
+  - {fileID: 582603743588135648}
+  - {fileID: 3326906579844729879}
+  - {fileID: 8336531215705544097}
+  - {fileID: 8351882626660797517}
 --- !u!65 &665716363524764951
 BoxCollider:
   m_ObjectHideFlags: 0

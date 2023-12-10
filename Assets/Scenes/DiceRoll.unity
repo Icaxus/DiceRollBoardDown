@@ -343,6 +343,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5819029365470460766, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_Name
+      value: dice2
+      objectReference: {fileID: 0}
     - target: {fileID: 6596235014006809060, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -358,6 +362,10 @@ PrefabInstance:
     - target: {fileID: 6596235014006809060, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596235014006809060, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7413761302796841301, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_LocalScale.x
@@ -739,6 +747,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 6596235014006809060, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7413761302796841301, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -794,6 +806,10 @@ PrefabInstance:
     - target: {fileID: 7901891055821155311, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_Name
       value: dice Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801610395111359403, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_Active
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
