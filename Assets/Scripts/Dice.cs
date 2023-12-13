@@ -30,17 +30,20 @@ public class Dice : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+             
             
-            //Debug.Log("Space pressed");
-            //_rigidbody.AddExplosionForce(5f, transform.position, 5.0f, 3.0f);
-            _rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
-            _rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
             
         }
 
         
     }
 
+    void DiceRolled()
+    {
+        _rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
+        _rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
+    }
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Ground"))

@@ -35,7 +35,6 @@ public class DiceEdge : Dice
             base.diceUp = 7 - Int32.Parse(this.name.ToString());
             // Debug.Log("Zarın değeri: " + diceUp);
             // Debug.Log("Zarın adı: " + this.name);
-            
         }
     }
 }

@@ -1,35 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+
+[System.Serializable]
+public class GameData
 {
-    // Start is called before the first frame update
-    [SerializeField] private List<Dice> dices;
-    void Start()
+    public int PointMultiplier;
+    public float MultiplyTimer;
+    public float MagnetTimer;
+    public bool IsMagnetActive;
+}
+
+public class GameManager : Singleton<GameManager>
+{
+    private bool isGameStarted;
+    
+    public bool IsGameStarted { get { return isGameStarted; } private set { isGameStarted = value; } }
+
+    public GameData GameData = new GameData();
+
+    public void StartGame()
     {
-        
+        if (IsGameStarted)
+            return;
+
+        IsGameStarted = true;
+        //EventManager.OnGameStart.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EndGame()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            //Debug.Log("Space pressed");
-            //_rigidbody.AddExplosionForce(5f, transform.position, 5.0f, 3.0f);
-            foreach (var dice in dices)
-            {
-                // dice._rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
-                // dice._rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
-            }
-            
-        }
-    }
+        if (!IsGameStarted)
+            return;
 
-    void GetDiceValues()
-    {
-        
+        IsGameStarted = false;
+        //EventManager.OnGameEnd.Invoke();
     }
 }
