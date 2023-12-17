@@ -18,8 +18,9 @@ public class DiceManager : Singleton<DiceManager>
         
     }
 
-    void RollDices()
+    public string GetDiceUpEdges()
     {
-        
+        return dices[0].GetComponent<Dice>().DiceUpEdgeValue() + "-" + dices[1].GetComponent<Dice>().DiceUpEdgeValue();
     }
+    
 }

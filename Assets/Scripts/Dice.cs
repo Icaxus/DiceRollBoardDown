@@ -3,60 +3,111 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
 {
 
-    [SerializeField] private Rigidbody _rigidbody;
+    private Rigidbody _rigidbody;
+    public Rigidbody Rigidbody { get { return (_rigidbody == null) ? _rigidbody = GetComponent<Rigidbody>() : _rigidbody; } }
+
+    private Collider _collider;
+    public Collider Collider { get { return (_collider == null) ? _collider = GetComponent<Collider>() : _collider; } }
+    
     [SerializeField] private float _force = 10.0f;
     [SerializeField] private List<GameObject> edges;
-    protected bool grounded;
+    protected bool grounded = true;
     protected int diceUp;
+    private int _lastDiceEdgeValue = 0;
     [SerializeField] private GameObject _tmpDice;
 
+    #region Events
+    [HideInInspector]
+    public UnityEvent OnDiceRoll = new UnityEvent();
+    #endregion
 
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         transform.rotation = Random.rotation;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
-             
+            Debug.Log("Grounded space bastık: " + grounded);
+            Debug.Log("Space");
+            grounded = false;
             
+            
+            StartCoroutine(DiceRolCoroutine());
             
         }
 
         
     }
 
-    void DiceRolled()
+    IEnumerator DiceRolCoroutine()
+    {
+        _rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
+        _rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
+        yield return new WaitForSeconds(2);
+        grounded = true;
+        _lastDiceEdgeValue = DiceUpEdgeValue();
+        Debug.Log("Değer: " + _lastDiceEdgeValue);
+    }
+
+    void DiceRoll()
     {
         _rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
         _rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
     }
     
-    private void OnTriggerExit(Collider other)
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.CompareTag("Ground"))
+    //     {
+    //         grounded = false;
+    //     }
+    // }
+    //
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("Ground"))
+    //     {
+    //         grounded = true;
+    //     }
+    // }
+
+    public int DiceUpEdgeValue()
     {
-        if (other.CompareTag("Ground"))
+        float tempMin = 5;
+        int edgeValue = 0;
+        foreach (var edge in edges)
         {
-            grounded = false;
+            if (edge.transform.position.y < tempMin)
+            {
+                edgeValue = Int32.Parse(edge.name);
+                tempMin = edge.transform.position.y;
+            }
         }
+
+
+        return 7-edgeValue;
     }
 
-    private void OnTriggerEnter(Collider other)
+    int DiceUpEdge()
     {
-        if (other.CompareTag("Ground"))
-        {
-            grounded = true;
-        }
+        Vector3 rotation = gameObject.transform.rotation.eulerAngles;
+
+
+        return 0;
     }
 }

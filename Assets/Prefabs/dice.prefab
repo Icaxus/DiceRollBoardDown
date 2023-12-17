@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 582603743588135648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.1, y: 0, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596235014006809060}
@@ -50,7 +50,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.1, z: 0.4}
   m_Center: {x: 0, y: 0.5, z: 0}
@@ -66,9 +66,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
   _force: 10
   edges: []
+  _tmpDice: {fileID: 0}
+  OnDiceRoll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &593563391816234537
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,8 +99,8 @@ Transform:
   m_GameObject: {fileID: 593563391816234537}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596235014006809060}
@@ -119,7 +122,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.4, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0.5}
@@ -135,9 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
   _force: 10
   edges: []
+  _tmpDice: {fileID: 0}
+  OnDiceRoll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3326906579844729879
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,8 +171,8 @@ Transform:
   m_GameObject: {fileID: 3326906579844729879}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596235014006809060}
@@ -188,7 +194,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.1, z: 0.4}
   m_Center: {x: 0, y: -0.5, z: 0}
@@ -204,9 +210,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
   _force: 10
   edges: []
+  _tmpDice: {fileID: 0}
+  OnDiceRoll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7388231220246023685
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,8 +243,8 @@ Transform:
   m_GameObject: {fileID: 7388231220246023685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596235014006809060}
@@ -257,7 +266,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.4, z: 0.4}
   m_Center: {x: 0.5, y: 0, z: 0}
@@ -273,9 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
   _force: 10
   edges: []
+  _tmpDice: {fileID: 0}
+  OnDiceRoll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8336531215705544097
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,8 +315,8 @@ Transform:
   m_GameObject: {fileID: 8336531215705544097}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596235014006809060}
@@ -326,7 +338,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.4, z: 0.4}
   m_Center: {x: -0.5, y: 0, z: 0}
@@ -342,9 +354,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
   _force: 10
   edges: []
+  _tmpDice: {fileID: 0}
+  OnDiceRoll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8351882626660797517
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,8 +387,8 @@ Transform:
   m_GameObject: {fileID: 8351882626660797517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596235014006809060}
@@ -395,7 +410,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.4, z: 0.1}
   m_Center: {x: 0, y: 0, z: -0.5}
@@ -411,9 +426,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7f461d72bbf1b4da1caa41b95da1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
   _force: 10
   edges: []
+  _tmpDice: {fileID: 0}
+  OnDiceRoll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6629353289888810511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,7 +576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06af1de7b5719af42817bbf43bbb6097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
   _force: 25
   edges:
   - {fileID: 593563391816234537}
@@ -567,6 +584,10 @@ MonoBehaviour:
   - {fileID: 3326906579844729879}
   - {fileID: 8336531215705544097}
   - {fileID: 8351882626660797517}
+  _tmpDice: {fileID: 0}
+  OnDiceRoll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &665716363524764951
 BoxCollider:
   m_ObjectHideFlags: 0

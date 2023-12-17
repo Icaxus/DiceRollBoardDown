@@ -7,7 +7,10 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EventManager.OnDiceRolled.AddListener(() =>
+        {
+            
+        });
     }
 
     // Update is called once per frame
