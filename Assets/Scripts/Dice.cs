@@ -1,22 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using static DG.Tweening.Tween;
 using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
 {
 
     private Rigidbody _rigidbody;
+    
     public Rigidbody Rigidbody { get { return (_rigidbody == null) ? _rigidbody = GetComponent<Rigidbody>() : _rigidbody; } }
 
     private Collider _collider;
     public Collider Collider { get { return (_collider == null) ? _collider = GetComponent<Collider>() : _collider; } }
     
     [SerializeField] private float _force = 10.0f;
+    [SerializeField] private Vector3 _resetPoint;
     [SerializeField] private List<GameObject> edges;
     protected bool grounded = true;
     protected int diceUp;
@@ -35,6 +39,7 @@ public class Dice : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         transform.rotation = Random.rotation;
+
     }
 
     // Update is called once per frame
@@ -58,10 +63,12 @@ public class Dice : MonoBehaviour
     {
         _rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
         _rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         grounded = true;
         _lastDiceEdgeValue = DiceUpEdgeValue();
         Debug.Log("Değer: " + _lastDiceEdgeValue);
+        DiceResetPosition();
+        
     }
 
     void DiceRoll()
@@ -69,22 +76,6 @@ public class Dice : MonoBehaviour
         _rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
         _rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
     }
-    
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     if (other.CompareTag("Ground"))
-    //     {
-    //         grounded = false;
-    //     }
-    // }
-    //
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.CompareTag("Ground"))
-    //     {
-    //         grounded = true;
-    //     }
-    // }
 
     public int DiceUpEdgeValue()
     {
@@ -109,5 +100,11 @@ public class Dice : MonoBehaviour
 
 
         return 0;
+    }
+
+    void DiceResetPosition()
+    {
+        transform.DOMove(_resetPoint,1);
+        transform.DORotate(Vector3.back, 1);
     }
 }
