@@ -1078,6 +1078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7983705393490221252}
+  - component: {fileID: 4622576879448116339}
   m_Layer: 0
   m_Name: desk
   m_TagString: Untagged
@@ -1102,6 +1103,31 @@ Transform:
   - {fileID: 3990873854010972529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &4622576879448116339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176483890066806588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002c3053c2d05f24ca60728b12d6b42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mans:
+  - {fileID: 7244238640482255978}
+  - {fileID: 5953773578926002787}
+  - {fileID: 4182246459300899050}
+  - {fileID: 1970355661148667447}
+  - {fileID: 3011651196403765123}
+  - {fileID: 6113991812039706379}
+  - {fileID: 3103039702893811679}
+  - {fileID: 6421649484134025804}
+  - {fileID: 271260092937902700}
+  - {fileID: 4954672328388088459}
+  - {fileID: 6991348242371425201}
+  - {fileID: 2307104779337894779}
 --- !u!1 &5528944109056144381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,6 +2244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 8
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!1001 &2722587633504672582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2304,6 +2332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 1
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!1001 &3499460144555229874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2398,6 +2428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 12
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!1001 &3859171284349205965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2549,6 +2581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 4
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!4 &4355162432973284566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72c3392e867f2ec45b1259fe3d6ac4f0, type: 3}
@@ -2640,6 +2674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 7
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!1001 &6046072481078027983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2726,6 +2762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 6
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!1001 &6169018049635383193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2812,6 +2850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 9
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!1001 &6455777983395564688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2893,6 +2933,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 2
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!4 &6781645480866212731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72c3392e867f2ec45b1259fe3d6ac4f0, type: 3}
@@ -2979,6 +3021,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 5
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!4 &6406671462380318040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72c3392e867f2ec45b1259fe3d6ac4f0, type: 3}
@@ -3070,6 +3114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 10
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!1001 &7777979680132204496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3151,6 +3197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 11
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!4 &7816654877056163899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72c3392e867f2ec45b1259fe3d6ac4f0, type: 3}
@@ -3237,6 +3285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manId: 3
+  _manDefaultRotation: 45
+  _manDefaultRotationRotated: -45
 --- !u!4 &7723249288518986482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72c3392e867f2ec45b1259fe3d6ac4f0, type: 3}
