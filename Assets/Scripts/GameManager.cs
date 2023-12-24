@@ -5,21 +5,13 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class GameData
-{
-    public int PointMultiplier;
-    public float MultiplyTimer;
-    public float MagnetTimer;
-    public bool IsMagnetActive;
-}
+
 
 public class GameManager : Singleton<GameManager>
 {
     private bool isGameStarted;
     
     public bool IsGameStarted { get { return isGameStarted; } private set { isGameStarted = value; } }
-
-    public GameData GameData = new GameData();
 
     public void StartGame()
     {

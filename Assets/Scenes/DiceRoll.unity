@@ -201,6 +201,10 @@ GameObject:
   m_Component:
   - component: {fileID: 269776885}
   - component: {fileID: 269776884}
+  - component: {fileID: 269776888}
+  - component: {fileID: 269776887}
+  - component: {fileID: 269776886}
+  - component: {fileID: 269776889}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -220,11 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d0d31ec76145a4aa6924203ac6cddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameData:
-    PointMultiplier: 0
-    MultiplyTimer: 0
-    MagnetTimer: 0
-    IsMagnetActive: 0
 --- !u!4 &269776885
 Transform:
   m_ObjectHideFlags: 0
@@ -240,6 +239,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269776886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269776883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b79e28d66ca4e47a37fff04b134a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &269776887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269776883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cdff90fa05ef2943bf93372e484050c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dices: []
+--- !u!114 &269776888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269776883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d6d75c292eb64408503c4d44b7615d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _desks: []
+--- !u!114 &269776889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269776883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cdff90fa05ef2943bf93372e484050c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dices: []
 --- !u!1 &328091919
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +352,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: _force
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: _tmpDice
       value: 
       objectReference: {fileID: 0}
@@ -320,6 +374,10 @@ PrefabInstance:
     - target: {fileID: 5819029365470460766, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_Name
       value: dice2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819029365470460766, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_TagString
+      value: Dice
       objectReference: {fileID: 0}
     - target: {fileID: 6596235014006809060, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_LocalScale.x
@@ -990,6 +1048,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: _force
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: _tmpDice
       value: 
       objectReference: {fileID: 0}
@@ -1004,6 +1066,10 @@ PrefabInstance:
     - target: {fileID: 4662498301149208453, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819029365470460766, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_TagString
+      value: Dice
       objectReference: {fileID: 0}
     - target: {fileID: 6596235014006809060, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_LocalScale.x
