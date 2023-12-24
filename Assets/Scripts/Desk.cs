@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using DG.Tweening;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class Desk : MonoBehaviour
@@ -23,19 +26,51 @@ public class Desk : MonoBehaviour
         int diceSum = diceValues.Last();
         diceValues.RemoveAt(diceValues.Count-1);
         
+        if (ManOpen(_mans[diceSum-1]))
+        {
+            Debug.Log("Döndürüyor beni.");
+            _mans[diceSum - 1].transform.DORotate(new Vector3(_mans[diceSum-1].transform.rotation.eulerAngles.x,_mans[diceSum-1].transform.rotation.eulerAngles.y,-45), 1);
+            return;
+        }
+
+        bool problem = false;
+        foreach (var diceValue in diceValues)    
+        {
+            if (ManOpen(_mans[diceValue-1]))
+            {
+                _mans[diceValue-1].transform.DORotate(new Vector3(_mans[diceSum-1].transform.rotation.eulerAngles.x,_mans[diceSum-1].transform.rotation.eulerAngles.y,-45), 1);
+            }
+            else
+            {
+                problem = true;
+            }
+        }
+
+        if (problem)
+        {
+            Debug.Log("Problem");
+            ResetMans();
+        }
+        
+        return;
+
+        diceValues.RemoveAt(diceValues.Count-1);
+       
+        foreach (var dice in diceValues)
         {
             
         }
-        foreach (var dice in diceValues)
+    }
+
+    private void ResetMans()
+    {
+        foreach (var man in _mans)
         {
-            if (CheckMan(_mans[dice - 1]))
-            {
-                
-            }
+            man.Reset();
         }
     }
 
-    private bool CheckMan(Man man)
+    private bool ManOpen(Man man)
     {
         return man.ManClosable();
     }

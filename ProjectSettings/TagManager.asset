@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Edge
   - Dice
+  - Desk
+  - Man
   layers:
   - Default
   - TransparentFX

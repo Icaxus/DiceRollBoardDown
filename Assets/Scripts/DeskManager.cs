@@ -11,6 +11,8 @@ public class DeskManager : MonoBehaviour
     void Start()
     {
         _desks = GameObject.FindGameObjectsWithTag("Desk").ToList();
+        EventManager.OnDiceRolled.AddListener(ManCheck);
+            
     }
 
     // Update is called once per frame

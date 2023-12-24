@@ -67,6 +67,11 @@ public class Man : MonoBehaviour
 
     public bool ManClosable()
     {
-        return _manEulers.z == -45f;
+        return Math.Round(transform.rotation.eulerAngles.z) - 45 == 0  ? true : false;
+    }
+
+    public void Reset()
+    {
+        transform.DORotate(new Vector3(_manEulers.x,_manEulers.y,_manDefaultRotation),1);
     }
 }

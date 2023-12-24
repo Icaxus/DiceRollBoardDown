@@ -22,7 +22,7 @@ public class Dice : MonoBehaviour
     [SerializeField] private GameObject _tmpDice;
     private Collider _collider;
 
-    
+    private int _lastDiceEdgeValue = 0;
 
     protected int diceValue;
     public int DiceValue
@@ -51,7 +51,36 @@ public class Dice : MonoBehaviour
     {
         
     }
+
+   
+
+    private void DiceRoll()
+    {
+        _rigidbody.AddForce(Vector3.up * _force * 2, ForceMode.Impulse);
+        _rigidbody.AddTorque(Random.rotation.eulerAngles * _force);
+    }
+
+    public int DiceUpEdgeValue()
+    {
+        float tempMin = 5;
+        var edgeValue = 0;
+        foreach (var edge in edges)
+            if (edge.transform.position.y < tempMin)
+            {
+                edgeValue = int.Parse(edge.name);
+                tempMin = edge.transform.position.y;
+            }
+
+
+        return 7 - edgeValue;
+    }
     
+    private void DiceResetPosition()
+    {
+        transform.DOMove(_resetPoint, 1);
+        var diceRotationVector = transform.rotation.eulerAngles;
+        transform.DORotate(new Vector3(diceRotationVector.x, 0, diceRotationVector.z), 1);
+    }
 
     #region Events
 

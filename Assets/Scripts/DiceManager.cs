@@ -51,6 +51,7 @@ public class DiceManager : Singleton<DiceManager>
         DicesResetPosition();
         GetDicesUpEdgeValues();
         _rolling = false;
+        EventManager.OnDiceRolled.Invoke();
     }
 
     private void DicesResetPosition()
@@ -65,12 +66,12 @@ public class DiceManager : Singleton<DiceManager>
 
     public void GetDicesUpEdgeValues()
     {
-        
+        _diceValues.Clear();
         int diceSum = 0;
         foreach (var dice in dices)
         {
-            _diceValues.Add(dice.DiceValue);
-            diceSum += dice.DiceValue;
+            _diceValues.Add(dice.DiceUpEdgeValue());
+            diceSum += dice.DiceUpEdgeValue();
         }
         _diceValues.Add(diceSum);
         

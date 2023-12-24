@@ -353,7 +353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: _force
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: _tmpDice
@@ -370,6 +370,10 @@ PrefabInstance:
     - target: {fileID: 4662498301149208453, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679902101108871784, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5819029365470460766, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_Name
@@ -743,6 +747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: desk
       objectReference: {fileID: 0}
+    - target: {fileID: 5176483890066806588, guid: e818c73faec7dd7439ad6090cff30ecd, type: 3}
+      propertyPath: m_TagString
+      value: Desk
+      objectReference: {fileID: 0}
     - target: {fileID: 7983705393490221252, guid: e818c73faec7dd7439ad6090cff30ecd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -1049,7 +1057,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: _force
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 316851595099584260, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: _tmpDice
@@ -1066,6 +1074,10 @@ PrefabInstance:
     - target: {fileID: 4662498301149208453, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679902101108871784, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5819029365470460766, guid: 6245ef5569c2b77418f5cde9becc3462, type: 3}
       propertyPath: m_TagString
